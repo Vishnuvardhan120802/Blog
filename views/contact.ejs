@@ -1,0 +1,162 @@
+<!-- 
+    <div>
+        <h1 class=" text-center text-bg-dark "><b>Contact US</b></h1>
+        <div>
+            <div class="card">
+                <div class="card-header">Contact Form</div>
+                <div class="card-body">
+
+                    <form method="post" action="/send">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Name"/>
+                            <% if(errors && errors.name) { %>
+                            <span class="text-danger"><%= errors.name.msg %></span>
+                            <% } %>
+                        </div>
+                        <div >
+                            <label for="email">Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Enter Email"/>
+                            <% if (errors && errors.email) { %>
+                            <span class="text-danger"><%= errors.email.msg %></span>
+                            <% } %>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Enter Subject"/>
+                            <% if (errors && errors.subject) { %>
+                            <span class="text-danger"><%= errors.subject.msg %></span>
+                            <% } %>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message">Message</label>
+                            <textarea name="message" class="form-control" placeholder="Enter message"></textarea>
+                            <% if(errors && errors.message) { %>
+                            <span class="text-danger"><%= errors.message.msg %></span>
+                            <% } %>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Server Side Validation</title>
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-warning text-center"><b>Node.js Tutorial - How to Send an Email</b></h1>
+        <div class="col-md-6 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header">Contact Form</div>
+                <div class="card-body">
+
+                    <form method="post" action="/send">
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Name"/>
+                            <% if(errors && errors.name) { %>
+                                <span class="text-danger"><%= errors.name.msg %></span>
+                                <% } %>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" class="form-control" placeholder="Enter Email"/>
+                                <% if (errors && errors.email) { %>
+                                <span class="text-danger"><%= errors.email.msg %></span>
+                                <% } %>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Enter Subject"/>
+                                <% if (errors && errors.subject) { %>
+                                <span class="text-danger"><%= errors.subject.msg %></span>
+                                <% } %>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Message</label>
+                                <textarea name="message" class="form-control" placeholder="Enter message"></textarea>
+                                <% if(errors && errors.message) { %>
+                                <span class="text-danger"><%= errors.message.msg %></span>
+                                <% } %>
+                            </div>
+                            <button type="submit" class="btn btn-success">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+    </html> -->
+    
+    
+    
+    
+    
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Page</title>
+        <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="/path/to/style.css">
+        <style>
+            .navbar a, .navbar-brand {
+                color: black !important;
+                text-decoration: none;
+            }
+    
+            .navbar a:hover, .navbar-brand:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body> -->
+        
+        <div class="container">
+            <h1 class="text-center"><b>Contact Us</b></h1>
+            <div class="col-md-8 mt-3 mb-3 mx-auto">
+                <div class="card">
+                    <!-- <div class="card-header">Contact Form</div> -->
+                    <div class="card-body">
+                        <form method="post" action="/send">
+                            <div class="mb-3">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" class="form-control" placeholder="Enter Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Enter Subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Message</label>
+                                <textarea name="message" class="form-control" placeholder="Enter message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- </body>
+    </html> -->
+    
