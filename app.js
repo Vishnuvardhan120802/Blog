@@ -12,7 +12,7 @@ const { check, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 
 const app=express();
-const port= 5000 || process.env.port
+const port = process.env.PORT || 5000
 
 //connect to DB
 connectDB();
