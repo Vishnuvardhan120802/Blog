@@ -4,6 +4,7 @@ const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const methodoverride = require('method-override');
 const connectDB=require('./server/config/db'); 
+const {isActiveRoute} = require('./server/helpers/routeHelpers');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
@@ -38,6 +39,9 @@ app.use(express.static('public'));
 app.use(expressLayout);
 app.set('layout','./layouts/main');
 app.set('view engine','ejs');
+
+
+app.locals.isActiveRoute = isActiveRoute;
 
 //Routes
 app.use('/',require('./server/routes/main'));

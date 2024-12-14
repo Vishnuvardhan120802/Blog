@@ -33,8 +33,9 @@ router.get('',async(req,res)=> {
         //const data=await Post.find();
         res.render('index',{locals,
             data,
-        current:page,
-    nextPage: hasNextPage ? nextPage : null
+            current:page,
+            nextPage: hasNextPage ? nextPage : null,
+            currentRoute : '/'
 });
     }
     catch(error){
@@ -59,7 +60,10 @@ router.get('/post/:id',async(req,res)=> {
             title:data.title,
             description:"Blog Created with Nodejs,Mongodb & Express    "
         }
-        res.render('post',{locals,data});
+        res.render('post',{locals,data,
+             currentRoute: `/post/${slug}`
+        }
+        );
     }
     catch(error){
         console.log(error);
@@ -99,13 +103,21 @@ router.post('/search',async (req,res)=>{
 
 
 
-
-
-router.get('/contact', (request, response) => {
-
-	response.render('contact', { errors : '' });
-
+router.get('/contact', (req, res) => {
+    res.render('contact', { 
+        errors: '', 
+        currentRoute: '/contact' 
+    });
 });
+
+
+
+
+// router.get('/contact', (request, response) => {
+
+// 	response.render('contact', { errors : '' });
+
+// });
 
 
 router.post('/send', 
@@ -120,7 +132,7 @@ router.post('/send',
 
 		if(!errors.isEmpty())
 		{
-			response.render('contact', { errors : errors.mapped() });
+			response.render('contact', { errors : errors.mapped(), currentRoute:'/contact' });
 		}
 		else
 		{
@@ -177,8 +189,10 @@ router.get('/success', (req, res) => {
 
 
 router.get('/about',(req,res)=> {
-    res.render('about');
-})
+    res.render('about',{
+        currentRoute: '/about'
+    });
+});
 
 module.exports=router;
 
